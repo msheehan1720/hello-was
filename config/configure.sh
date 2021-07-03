@@ -19,7 +19,7 @@ if [ ! -z "$1" ]; then
     /tmp/work/run_py_script.sh "$@"
 elif [ ! -z "$(ls /work/config)" ]; then
     echo "+ Found config-files under /tmp//work/config. Executing..."
-    find /tmp//work/config -name "*.py"  -print0 | sort -z | xargs -0 -n 1 -r /tmp/work/run_py_script.sh
+    find /tmp//work -name "*.py"  -print0 | sort -z | xargs -0 -n 1 -r /tmp/work/run_py_script.sh
 fi
 /tmp/work/applyConfig.sh
 stop_server
