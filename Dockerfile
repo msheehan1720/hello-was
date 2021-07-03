@@ -5,5 +5,5 @@ WORKDIR /tmp/work
 
 COPY . /tmp/work/
 
-# RUN env JVM_EXTRA_CMD_ARGS=-Xnoloa /tmp/work/config/configure.sh
+ RUN env JVM_EXTRA_CMD_ARGS=-Xnoloa /tmp/work/config/configure.sh
 
