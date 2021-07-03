@@ -78,7 +78,7 @@ server = getName(getServerId(""))
 parms = "-appname Application"
 parms += " -node " + node + " -server " + server
 parms += " -nouseMetaDataFromBinary"
-app = AdminApp.install("/work/config/app.ear", [parms])
+app = AdminApp.install("/tmp/work/config/app.ear", [parms])
 
 AdminTask.setGenericJVMArguments('[-nodeName ' + node + ' -serverName ' + server + ' -genericJvmArguments "-Xnoloa"]')
 
